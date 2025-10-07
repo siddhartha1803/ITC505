@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prettified Essay — Siddharth Talasila</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header container">
+    <h1 class="site-title">ITC505 Lab 4</h1>
+    <p class="site-subtitle">Prettify Your Essay</p>
+  </header>
+
+  <main id="main" class="container prose layout">
+    <div class="content">
+      <article aria-labelledby="essay-title">
+        <header class="resume-head">
+          <h2 id="essay-title">Siddharth Talasila</h2>
+          <p class="lede"><a href="tel:+16143817769">+1 (614) 381 7769</a></p>
+          <a href="https://github.com/siddhartha1803" target="_blank" rel="noopener">github.com/siddhartha1803</a>
+        </header>
+
+        <section>
+          <h3>Education</h3>
+          <div class="item">
+            <h4>Northern Arizona University, Flagstaff <span class="meta">GPA: 4.0</span></h4>
+            <p>Master of Science in Information Technology <span class="meta">Jan 2025 – May 2026</span></p>
+          </div>
+          <div class="item">
+            <h4>Woxsen University, India <span class="meta">GPA: 3.34</span></h4>
+            <p>Bachelor of Technology in Computer Science <span class="meta">Jul 2020 – May 2024</span></p>
+          </div>
+          <hr class="section-divider" />
+        </section>
+
+        <section>
+          <h3>Experience</h3>
+          <div class="item">
+            <h4>AI Research Intern <span class="meta">Woxsen University — Jan 2024 – May 2024</span></h4>
+            <ul>
+              <li>Used GPT-4 and custom prompts to extract and summarize key information from raw security logs and phishing datasets.</li>
+              <li>Built Python scripts to test different LLM prompting strategies for classifying log severity and identifying suspicious patterns.</li>
+              <li>Designed a front-end prototype in React to visualize LLM-generated security insights for easier triage and operator feedback.</li>
+              <li>Explored OpenAI tooling and evaluated prompt accuracy across a variety of real-world log examples.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h4>Security Analyst Intern <span class="meta">CyberSophy — May 2023 – Aug 2023</span></h4>
+            <ul>
+              <li>Designed and deployed a Cyber Threat Intelligence and Incident Response system using MISP, TheHive, Cortex, and GPT-based LLMs, with Elastic Stack and SOAR for automation.</li>
+              <li>Led five web-app penetration tests, identifying critical vulnerabilities and recommending remediation strategies.</li>
+              <li>Developed Python automation for VAPT reporting and vulnerability scanning, reducing manual effort.</li>
+              <li>Built a threat-intel dashboard in Python/React to visualize attack patterns and provide actionable insights.</li>
+            </ul>
+          </div>
+          <hr class="section-divider" />
+        </section>
+
+        <section class="addendum card">
+            <h2 id="addendum-title">Addendum: My Styling Choices</h2>
+            <p>
+              I wanted to create the layout in a professional manner without using heavy colors and other decorative effects.
+            </p>
+          
+            <ul>
+              <li><b>Typography:</b> I applied <i>Inter</i> to headings and <i>Merriweather</i> to the main text. Such a combination divides the titles of sections and the main part and maintains the flow of reading the whole text as effortless and current.</li>
+          
+              <li><b>Colors:</b> The off-white background with dark gray text is rather well-contrasting, and indigo accents create a slight and tech-like appearance that is both noticeable but still professional.</li>
+          
+              <li><b>Layout:</b> I have put the main content to the left-hand side and placed the Skills to the right in a sidebar. This makes the important details visible and the design appear balanced and more similar to a real resume design.</li>
+          
+              <li><b>Spacing:</b> To make the text open and easy to read, I used regular white spacing between paragraphs and list items. It also assists in making every section to shine out.</li>
+          
+              <li><b>Details:</b> The rounded skill labels, footer date and skip link give it slight usability and the polish without making the design too complex.</li>
+            </ul>
+          
+          </section>
+          
+          
+      </article>
+    </div>
+
+    <!-- Right: sticky sidebar skills -->
+    <aside class="sidebar">
+      <section class="skills card">
+        <h3>Skills</h3>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">C/C++</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">Flask</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Docker</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Git</span>
+          <span class="chip">OWASP ZAP</span>
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Nmap</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">Snort</span>
+          <span class="chip">MISP</span>
+          <span class="chip">TheHive</span>
+          <span class="chip">Cortex</span>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="site-footer container">
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+</body>
+</html>
