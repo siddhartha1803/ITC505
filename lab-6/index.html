@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITC505 – Lab 6: Smart Budget Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="layout">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>Smart Budget Tracker</h1>
+      <p class="tagline">Plan • Track • Balance</p>
+    </header>
+
+    <!-- ===== NAVIGATION SIDEBAR ===== -->
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== MAIN CONTENT AREA ===== -->
+    <main>
+      <h2>Expense Manager</h2>
+      <p>Use this mini-tool to add your daily expenses, view the running total, and calculate the average.</p>
+
+      <form id="expenseForm">
+        <label for="item">Item:</label>
+        <input type="text" id="item" placeholder="e.g. Coffee" required />
+
+        <label for="amount">Amount ($):</label>
+        <input type="number" id="amount" step="0.01" placeholder="e.g. 4.75" required />
+
+        <div class="buttons">
+          <button type="submit">Add Expense</button>
+          <button type="button" onclick="resetExpenses()">Reset</button>
+        </div>
+      </form>
+
+      <section id="expenseList"></section>
+      <div id="summary"></div>
+    </main>
+
+    <!-- ===== ADVERTISEMENT SECTION ===== -->
+    <aside class="advertisement">
+      <a href="https://www.amazon.com/OPNICE-Organizers-Accessories-Organizer-Workspace/dp/B0DB8F7GDN"
+         target="_blank" rel="noopener noreferrer">
+        <img src="https://m.media-amazon.com/images/I/81MeUftFm8L._AC_SX679_.jpg"
+             alt="OPNICE 2-Tier Desk Organizer and Monitor Stand" />
+      </a>
+      <p>Click the image to explore this desk-organizer on Amazon.</p>
+    </aside>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <footer>
+      <p><strong>Addendum:</strong><br>
+        The Smart Budget Tracker models the complete responsive Holy Grail Layout that is built on CSS Grid. Every structural component is fluidly scaled at any screen size: header, sidebar, main, advertisement and footer. The project uses JavaScript authorativeness in form of a live cost tracker. The program reacts dynamically to event-driven DOM manipulation to update the list, total and average values as users add a single item and an amount. To do this, it was necessary to prevent the default way of submitting the form with preventDefault and process the data with array functions such as push and reduce. Problems with grid cell resizing occurred early in the development stage with grid cells often resizing unevenly; the introduction of minmax() and auto-fit fixed responsiveness. The form-validation edge cases were debugged to have correct numeric parsing, and the CSS additions that gave such features as transparent panels and hover effect to the design gave the overall professional appearance. In general, this assignment provided me with a better insight into the relationship between structural layout, event handling, and dynamic rendering to create interactive web applications.
+      </p>
+
+      <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+  </div>
+
+  <!-- ===== JAVASCRIPT LINK ===== -->
+  <script src="script.js"></script>
+</body>
+</html>
