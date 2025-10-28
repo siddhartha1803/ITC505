@@ -1,0 +1,145 @@
+:root {
+    --primary: #4e9af1;
+    --accent: #f46ea0;
+    --bg-dark: #1e1f26;
+    --light: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--light);
+  }
+  
+  /* HOLY GRAIL GRID */
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "sidebar main advertisement"
+      "footer footer footer";
+    grid-template-columns: minmax(180px, 220px) 1fr minmax(200px, 260px);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* HEADER */
+  header {
+    grid-area: header;
+    text-align: center;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .tagline {
+    font-size: 1rem;
+    color: #fdfdfd;
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    grid-area: sidebar;
+    background: rgba(0,0,0,0.45);
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar li {
+    margin: 12px 0;
+  }
+  .sidebar a {
+    color: var(--light);
+    text-decoration: none;
+  }
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  /* MAIN */
+  main {
+    grid-area: main;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  input {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+  }
+  button {
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: var(--accent);
+  }
+  #expenseList {
+    margin-top: 20px;
+  }
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.25);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+  }
+  #summary {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  /* ADVERTISEMENT */
+  .advertisement {
+    grid-area: advertisement;
+    text-align: center;
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .advertisement img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* FOOTER */
+  footer {
+    grid-area: footer;
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 800px) {
+    .layout {
+      grid-template-areas:
+        "header"
+        "main"
+        "advertisement"
+        "sidebar"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
+  
