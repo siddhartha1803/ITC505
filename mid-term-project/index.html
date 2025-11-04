@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Choose Your Own Adventure — Space Explorer</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1>Space Explorer: The Lost Colony</h1>
+    <p class="meta">
+      By <strong>Siddhartha Talasila</strong> • Course: <strong>ITC 505</strong> • Project: Mid‑Term
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="story-card">
+      <div id="storyImageWrap">
+        <img id="storyImage" alt="Scene image"/>
+      </div>
+      <div class="story-content">
+        <p id="storyText"></p>
+        <div id="choices" class="choices"></div>
+      </div>
+    </section>
+    <div class="controls">
+      <button id="restartBtn" class="ghost">Restart Adventure</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Last updated: 
+      <span id="lastModified"></span>
+    </p>
+  </footer>
+  <script type="text/javascript">
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
