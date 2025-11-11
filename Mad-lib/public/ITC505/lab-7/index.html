@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Lib Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="box">
+    <h1>Mad Lib Creator</h1>
+
+    <form action="/ITC505/lab-7/submit" method="POST">
+
+        <label for="animal">Animal:</label>
+        <input type="text" id="animal" name="animal" required />
+
+        <!-- <label for="adjective">Adjective:</label> -->
+        <input type="text" id="adjective" name="adjective" required />
+
+        <label for="verb">Verb:</label>
+        <input type="text" id="verb" name="verb" required />
+
+        <label for="object">Object:</label>
+        <input type="text" id="object" name="object" required />
+
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" required />
+
+        <button type="submit">Generate Story</button>
+    </form>
+
+    <div class="addendum">
+        <h2>Addendum</h2>
+        <p>
+            To complete this lab, I created an ExpressJS server that accepts form
+            submissions and dynamically builds a Mad Lib story.  
+            I ensured proper form validation, route handling, and static file serving.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>
