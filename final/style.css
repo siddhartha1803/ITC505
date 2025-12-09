@@ -1,0 +1,97 @@
+/* Global styles */
+body {
+    background: #101010;
+    color: #fff;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Bungee Spice", cursive;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Game panel */
+.game-panel {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#new-game {
+    padding: 8px 14px;
+    border: none;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#status {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+/* Board grid */
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-gap: 6px;
+    justify-content: center;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 6px;
+    border: 2px solid #555;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.cell.is-off {
+    background: black;
+    border-color: #00aaff;
+}
+
+/* Info & addendum */
+.info, .addendum {
+    background: #181818;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.info h2, .addendum h2 {
+    color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
