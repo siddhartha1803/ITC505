@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lights Out – ITC505 Final Project</title>
+
+    <!-- Required “font craziness” using contrasting Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Mono:wght@300;400;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Lights Out!</h1>
+        <p class="subtitle">
+            Turn all squares white to win. Clicking toggles that square + its neighbors.
+        </p>
+    </header>
+
+    <main>
+        <section class="game-panel">
+
+            <div class="controls">
+                <button id="new-game">New Random Game</button>
+                <p id="status" class="status">Make all squares white!</p>
+            </div>
+
+            <div id="board" class="board" aria-label="Lights Out game board"></div>
+        </section>
+
+        <section class="info">
+            <h2>How To Play</h2>
+            <ul>
+                <li>Clicking a square toggles it and the four orthogonal neighbors.</li>
+                <li>You win when the board is entirely white.</li>
+                <li>The starting configuration is always random **and solvable**.</li>
+            </ul>
+        </section>
+
+        <section class="addendum">
+            <h2>Addendum: Development Notes, Challenges & Insights</h2>
+            <p>
+                My first goal was to implement the core toggle behavior for one square and its neighbors.
+                This required storing each cell’s row and column so the JavaScript could calculate
+                which neighbors to flip. Once that worked reliably, I added a class called <code>is-off</code>
+                to visually represent “black” squares using CSS instead of inline styles.
+            </p>
+
+            <p>
+                The biggest conceptual challenge was creating a board that is **random** but still **solvable**.
+                Randomly assigning white/black states can easily create impossible boards. The approach that solved
+                this was to start from a known solved state (all white) and then programmatically simulate
+                a sequence of valid random moves. Because every move is reversible using real game logic,
+                the resulting puzzle is guaranteed solvable. This also prevents the game from falsely
+                detecting a win during setup.
+            </p>
+
+            <p>
+                For design, the assignment asked for noticeable “font-craziness,” so I paired the very loud
+                arcade-style “Bungee Spice” for the title with a monospaced technical font for the body.
+                Serving these fonts simply required linking the Google Fonts stylesheet in the <code>head</code>
+                section and applying them with CSS.
+            </p>
+
+            <p>
+                One interesting edge case was ensuring that very small boards or rapid clicking wouldn’t break
+                the win detection. To solve this, the toggle function includes bounds checking and the win
+                check only runs during real user interaction — never during randomization. This stabilized the
+                game and ensured consistent behavior. Overall, the project strengthened my understanding of DOM
+                manipulation, event delegation, and deterministic puzzle generation.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- REQUIRED FOOTER (must be placed directly before </body>) -->
+    <footer>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById("lastModified").textContent = x;
+    </script>
+
+</body>
+</html>
